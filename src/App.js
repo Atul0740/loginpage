@@ -10,6 +10,7 @@ function App() {
           <Route path='/' exact component={Form}></Route>
           <Route path='/signup' exact component={Register} ></Route>
           <Route path='/login' component={Form}></Route>
+          <Route path='/loginpage' component={Form}></Route>
         </Switch>
       </BrowserRouter>
     </div>
