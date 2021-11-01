@@ -1,6 +1,6 @@
 import React from 'react'
 import './Form.css'
-import photo from '../assets/about.png'
+import { NavLink } from 'react-router-dom'
 const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,23 +18,22 @@ const Form = () => {
                 </div>
                 <div className="or">-OR-</div>
 
-                <div className="photo">
-                    <img src={photo} alt="" />
-                </div>
                 <form onSubmit={handleSubmit} className='login'>
                     <label htmlFor="email" className='email-label'>Email</label>
                     <div className='input-content'>
                         <i class="fa fa-envelope"></i>
-                        <input type="email" name="email" className='email-input' autoComplete="off"/>
+                        <input type="email" name="email" className='email-input' autoComplete="off" placeholder="Email" id="email" />
                     </div>
                     <label htmlFor="password" className='password-label'>Password</label>
                     <div className='input-content'>
                         <i class="fa fa-lock"></i>
-                        <input type="password" name="email" className='password-input' />
+                        <input type="password" name="email" className='password-input'placeholder="Password" id="password" />
                     </div>
                     <div className="forgot"> <a href="/"> Forgot my password </a></div>
-                    <button type="submit" className="login-btn">Login</button>
-                    <button className="signup">Sign Up</button>
+                    <NavLink to="/login">
+                    <button type="submit" className="login-btn">Login</button></NavLink>
+                    <NavLink to='/signup'>
+                    <button className="signup">Sign Up</button></NavLink>
                 </form>
                 <div className="footer">
                     <div className="first-content">

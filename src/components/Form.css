@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
 .form {
     color: #000;
     width: 960px;
@@ -28,9 +27,10 @@ button {
 }
 
 .logo {
-    font-family: 'Fruktur', cursive;
     color: blue;
-    font-size: x-large;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 .page-text {
@@ -87,22 +87,22 @@ form input:focus {
 form label {
     font-size: small;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     position: absolute;
 }
 
 .email-label {
     top: 10px;
     left: 10px;
-    background: white;
+    background: transparent;
     font-weight: bolder;
 }
 
 .password-label {
-    background: white;
+    background: transparent;
     font-weight: bolder;
     left: 10px;
-    top: 98px;
+    top: 95px;
 }
 
 .input-content {
@@ -164,7 +164,6 @@ form button {
 }
 
 .logo-text {
-    font-family: 'Fruktur', cursive;
     cursor: pointer;
 }
 
