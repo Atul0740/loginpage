@@ -4,7 +4,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#3271a8, #3c32a8);
-    background-image: url('./assets/2.jfif');
-    background-size: cover;
+    background: linear-gradient(#1e2225fa, #241d72);
 }
