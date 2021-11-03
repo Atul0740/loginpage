@@ -8,7 +8,7 @@
 }
 
 .text {
-    width: 50%;
+    width: 65%;
     height: 100%;
     background: #eee;
     border-radius: 10px 0px 0px 10px;
@@ -26,6 +26,12 @@ button {
     padding: 5px 5px;
 }
 
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+    box-shadow: 1px 1px 0px #999, 2px 2px 0px #999, 3px 3px 0px #999, 4px 4px 0px #999, 5px 5px 0px #999, 6px 6px 0px #999;
+}
+
 .logo {
     color: blue;
     font-size: larger;
@@ -36,34 +42,6 @@ button {
 .page-text {
     font-size: xx-large;
     margin-bottom: 20px;
-}
-
-.social-button button {
-    margin-right: 20px;
-    text-align: center;
-    font-size: small;
-}
-
-.social-button button i {
-    margin-right: 10px;
-}
-
-.facebook {
-    background: linear-gradient(#3271a8, #857bf3);
-    color: white;
-}
-
-.google {
-    color: white;
-    background: linear-gradient(#a83232, #eb2121);
-}
-
-.or {
-    margin: 20px 0px 20px 150px;
-}
-
-.photo img {
-    width: 50%;
 }
 
 form {
@@ -85,31 +63,52 @@ form input:focus {
 }
 
 form label {
-    font-size: small;
-    text-transform: uppercase;
     letter-spacing: 1px;
     position: absolute;
 }
 
 .email-label {
+    top: 38px;
+    left: 60px;
+    background: transparent;
+    font-size: larger;
+}
+
+.email-label-focussed {
+    font-size: smaller;
     top: 10px;
     left: 10px;
-    background: transparent;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
     font-weight: bolder;
+    background: linear-gradient(#eee, rgb(215, 229, 233));
+    color: black;
 }
 
 .password-label {
     background: transparent;
-    font-weight: bolder;
-    left: 10px;
+    font-size: larger;
+    left: 60px;
+    top: 123px;
+}
+
+.password-label-focussed {
+    font-size: smaller;
     top: 95px;
+    left: 10px;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background: linear-gradient(#eee, rgb(215, 229, 233));
+    color: black;
 }
 
 .input-content {
     background-color: rgb(215, 229, 233);
     border-radius: 10px;
     padding: 20px 10px;
-    margin: 20px 0px 0px
+    margin: 20px 0px 0px;
+    border: 1px solid black;
 }
 
 .email-input,
@@ -119,7 +118,7 @@ form label {
 }
 
 .input-content i {
-    margin-right: 20px;
+    margin: 0px 20px 0px 10px;
 }
 
 .forgot {
@@ -133,7 +132,7 @@ form label {
     transition: all 0.5s ease;
 }
 
-.forgot a {
+a {
     text-decoration: none;
 }
 
@@ -154,12 +153,15 @@ form button {
 
 .footer {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
+    left: 20px;
     display: flex;
+    justify-content: space-between;
+    width: 95%;
 }
 
 .first-content {
-    margin-right: 120px;
+    /* margin-right: 150px; */
     color: grey;
 }
 
@@ -183,7 +185,7 @@ form button {
 }
 
 .bg {
-    width: 50%;
+    width: 35%;
     height: 100%;
     background: linear-gradient(-135deg, #c850c0, #4158d0);
     border-radius: 0px 10px 10px 0px;

@@ -3,52 +3,159 @@
     background: white;
     border-radius: 10px;
     display: flex;
-    width: 960px;
-    height: 1150px;
+    width: 1000px;
+    height: 975px;
 }
 
 .register .text {
-    width: 50%;
     padding: 50px 20px 0px 20px;
+    width: 75%;
+}
+
+.register .bg {
+    width: 25%;
+}
+
+.register .input-content {
+    margin-top: 0px;
+}
+
+.register .signup-form p {
+    visibility: hidden;
+}
+
+#checkbox-p {
+    visibility: hidden;
+}
+
+.radio-buttons p {
+    visibility: hidden;
+}
+
+.input-content label {
+    cursor: text;
+}
+
+.signup-form input {
+    width: 320px;
+}
+
+.account-details {
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.names {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
 }
 
 .name-label {
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     background: transparent;
+    font-size: larger;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.name-label-focus {
+    font-size: small;
+    color: black;
+    top: -10px;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
     font-weight: bolder;
+    background: linear-gradient(#eee, rgb(215, 229, 233));
 }
 
 .username-label {
     background: transparent;
+    font-size: larger;
+    text-transform: none;
+    letter-spacing: normal;
+    left: 380px;
+    top: 20px;
+}
+
+.username-label-focus {
+    font-size: smaller;
+    top: -10px;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
     font-weight: bolder;
-    left: 10px;
-    top: 95px;
+    background: linear-gradient(#eee, rgb(215, 229, 233));
+    color: black;
 }
 
 .email-label-2 {
-    top: 179px;
-    left: 10px;
     background: transparent;
+    font-size: larger;
+    text-transform: none;
+    letter-spacing: normal;
+    left: 20px;
+    top: 125px;
+}
+
+.email-label-focus {
+    font-size: smaller;
+    top: 95px;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
     font-weight: bolder;
+    background: linear-gradient(#eee, rgb(215, 229, 233));
+    color: black;
 }
 
 .password-label-2 {
-    bottom: 139px;
-    left: 10px;
     background: transparent;
+    font-size: larger;
+    text-transform: none;
+    letter-spacing: normal;
+    top: 125px;
+    left: 380px;
+}
+
+.password-label-focus {
+    font-size: smaller;
+    top: 95px;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
     font-weight: bolder;
+    background: linear-gradient(#eee, rgb(215, 229, 233));
+    color: black;
 }
 
 .referral-label {
-    left: 10px;
     background: transparent;
+    font-size: larger;
+    text-transform: none;
+    letter-spacing: normal;
+    bottom: 20px;
+    left: 20px;
+}
+
+.referral-label-focus {
+    font-size: smaller;
+    bottom: 58px;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
     font-weight: bolder;
-    bottom: 56px;
+    background: linear-gradient(#eee, rgb(215, 229, 233));
+    color: black;
 }
 
 .personal-details {
     margin: 20px 0px;
+    color: grey;
+}
+
+.radio-buttons {
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+    margin-bottom: 0px;
 }
 
 .radio-toolbar {
@@ -58,6 +165,7 @@
     min-width: 320px;
     border-radius: 10px;
     position: relative;
+    border: 1px solid black;
 }
 
 .gender-title {
@@ -65,8 +173,9 @@
     font-size: small;
     font-weight: bolder;
     letter-spacing: 1px;
-    top: -10px;
+    top: -12px;
     text-transform: uppercase;
+    background: linear-gradient(#eee, rgb(215, 229, 233));
 }
 
 .academics-title {
@@ -76,18 +185,35 @@
     letter-spacing: 1px;
     top: -10px;
     text-transform: uppercase;
+    background: linear-gradient(#eee, rgb(215, 229, 233));
 }
 
 .birthday {
     position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 0px;
+    min-width: 320px;
+    padding: 20px 15px;
+    background-color: rgb(215, 229, 233);
 }
 
 .birthday-input {
-    background-color: rgb(215, 229, 233);
+    background-color: #eee;
     padding: 20px 15px;
     min-width: 320px;
     border-radius: 10px;
     border: none;
+}
+
+.Datepicker {
+    background-color: rgb(215, 229, 233);
+    border: none;
+    font-size: large;
+}
+
+.Datepicker:focus {
+    outline: none;
 }
 
 .birthday-input:focus {
@@ -102,6 +228,8 @@
     position: absolute;
     top: -10px;
     left: 10px;
+    background: linear-gradient(#eee, rgb(215, 229, 233));
+    color: black;
 }
 
 .radio-toolbar input[type="radio"] {
@@ -121,6 +249,7 @@
     margin-right: 20px;
     min-width: 120px;
     text-align: center;
+    cursor: pointer;
 }
 
 .radio-toolbar label:hover {
@@ -133,6 +262,7 @@
 
 .radio-toolbar input[type="radio"]:checked+label {
     background-color: rgb(255, 239, 185);
+    color: black;
 }
 
 .terms {
@@ -150,6 +280,10 @@
     margin-right: 10px;
 }
 
+.terms input:checked+label {
+    color: black;
+}
+
 .terms label {
     font-size: small;
 }
@@ -157,8 +291,4 @@
 .signup-page-btns button {
     margin: 20px 20px 100px 0px;
     min-width: 100px;
-}
-
-.register .bg {
-    width: 50%;
 }

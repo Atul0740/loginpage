@@ -7,3 +7,7 @@
     background: linear-gradient(#6cb2ebfa, #082c8f);
     padding: 20px 0px;
 }
+
+label {
+    color: grey;
+}

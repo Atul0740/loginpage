@@ -1,39 +1,89 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Form.css'
 import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
+
 const Form = () => {
-    const handleSubmit = (e) => {
+    
+    const [email, setemail] = useState("")
+    const [emailError, setemailError] = useState('')
+    const [passwordError, setpasswordError] = useState('')
+    const [password, setpassword] = useState("")
+    const handleemails = (e) => {
+        setemail(e.target.value);
+        setemailError('');
+    };
+    const handlepasswords = (e) => {
+        setpassword(e.target.value);
+        setpasswordError('');
+    };
+    useEffect(() => {
+        let label = document.getElementById('email-labelled');
+        if (email === "") {
+            label.classList.remove('email-label-focussed');
+        }
+        else {
+            label.classList.add('email-label-focussed');
+        }
+    }, [email])
+    
+    useEffect(() => {
+        let label = document.getElementById('password-labelled');
+        if (password === "") {
+            label.classList.remove('password-label-focussed');
+        }
+        else {
+            label.classList.add('password-label-focussed');
+        }
+    }, [password])
+    const valid = () =>{
+        if(email==='' || password===''){
+            if(email==='')
+            setemailError('Please Enter Email')
+            if(password==='')
+            setpasswordError('Please Enter Password')
+            return false;
+        }
+        if(email.includes('@') && email.includes('.'));
+        else{
+            setemailError('Enter Valid Email')
+            return false;
+        } 
+        return true;
+    }
+    const HandleSubmit=(e)=>{
         e.preventDefault();
+        if(valid()){
+            setemail('')
+            setpassword('')
+        }
     }
     return (
-        <div className='form'>
+        <div className='form' data-aos="zoom-in">
             <div className="text">
                 <div className="logo">
-                    thesocialcomment
+                    <a href="https://www.thesocialcomment.com/" target="_blank" rel="noreferrer"> thesocialcomment</a>
                 </div>
                 <div className="page-text">Welcome Back. Please Login</div>
-                <div className="social-button">
-                <button className='facebook'><i class="fab fa-facebook-f" style={{ fontSize: "15px" }} ></i>Login with facebook</button>
-                <button className='google'><i class="fab fa-google" style={{ fontSize: "15px" }} ></i>Login with gmail</button>
-                </div>
-                <div className="or">-OR-</div>
-
-                <form onSubmit={handleSubmit} className='login'>
-                    <label htmlFor="email" className='email-label'>Email</label>
+                <form onSubmit={HandleSubmit} className='login'>
                     <div className='input-content'>
                         <i class="fa fa-envelope"></i>
-                        <input type="email" name="email" className='email-input' autoComplete="off" placeholder="Email" id="email" />
+                        <input type="email" name="email" className='email-input' autoComplete="off" id="email" required value={email} onChange={handleemails} />
+                        <label htmlFor="email" className='email-label' id='email-labelled'>Email</label>
+                        <span style={{color:"red",fontWeight:"bolder"}}>{emailError}</span>
                     </div>
-                    <label htmlFor="password" className='password-label'>Password</label>
+                    
                     <div className='input-content'>
                         <i class="fa fa-lock"></i>
-                        <input type="password" name="email" className='password-input'placeholder="Password" id="password" />
+                        <input type="password" name="password" className='password-input' id="password" required value={password} onChange={handlepasswords} />
+                        <label htmlFor="password" className='password-label' id='password-labelled'>Password</label>
+                        <span style={{color:"red",fontWeight:"bolder"}}>{passwordError}</span>
                     </div>
                     <div className="forgot"> <a href="/"> Forgot my password </a></div>
                     <NavLink to="/login">
-                    <button type="submit" className="login-btn">Login</button></NavLink>
+                        <button type="submit" className="login-btn" onClick={HandleSubmit} >Login</button></NavLink>
                     <NavLink to='/signup'>
-                    <button className="signup">Sign Up</button></NavLink>
+                        <button className="signup">Sign Up</button></NavLink>
                 </form>
                 <div className="footer">
                     <div className="first-content">
@@ -42,14 +92,14 @@ const Form = () => {
                     </div>
                     <div className="second-content">
                         <div className="icons" >
-                            <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                            <a href="https://www.facebook.com/thesocialcomment/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-facebook-square"  ></i>
                             </a>
-                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+                            <a href="https://www.instagram.com/thesocialcomment/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-instagram" ></i></a>
-                            <a href="https://www.twitte.com" target="_blank" rel="noreferrer">
+                            <a href="https://twitter.com/Social__Comment" target="_blank" rel="noreferrer">
                                 <i class="fab fa-twitter-square"  ></i></a>
-                            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                            <a href="https://www.linkedin.com/company/thesocialcomment" target="_blank" rel="noreferrer">
                                 <i class="fab fa-linkedin" ></i></a>
                         </div>
 
