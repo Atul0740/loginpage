@@ -19,21 +19,31 @@ const Form = () => {
     };
     useEffect(() => {
         let label = document.getElementById('email-labelled');
+        let input=document.getElementById('input-email');
         if (email === "") {
             label.classList.remove('email-label-focussed');
+            input.classList.remove('outfocus');
+            input.classList.add('infocus')
         }
         else {
             label.classList.add('email-label-focussed');
+            input.classList.add('outfocus');
+            input.classList.remove('infocus')
         }
     }, [email])
     
     useEffect(() => {
         let label = document.getElementById('password-labelled');
+        let input=document.getElementById('input-password');
         if (password === "") {
             label.classList.remove('password-label-focussed');
+            input.classList.remove('outfocus');
+            input.classList.add('infocus')
         }
         else {
             label.classList.add('password-label-focussed');
+            input.classList.add('outfocus');
+            input.classList.remove('infocus')
         }
     }, [password])
     const valid = () =>{
@@ -66,14 +76,14 @@ const Form = () => {
                 </div>
                 <div className="page-text">Welcome Back. Please Login</div>
                 <form onSubmit={HandleSubmit} className='login'>
-                    <div className='input-content'>
+                    <div className='input-content infocus' id='input-email'>
                         <i class="fa fa-envelope"></i>
                         <input type="email" name="email" className='email-input' autoComplete="off" id="email" required value={email} onChange={handleemails} />
                         <label htmlFor="email" className='email-label' id='email-labelled'>Email</label>
                         <span style={{color:"red",fontWeight:"bolder"}}>{emailError}</span>
                     </div>
                     
-                    <div className='input-content'>
+                    <div className='input-content infocus' id='input-password'>
                         <i class="fa fa-lock"></i>
                         <input type="password" name="password" className='password-input' id="password" required value={password} onChange={handlepasswords} />
                         <label htmlFor="password" className='password-label' id='password-labelled'>Password</label>

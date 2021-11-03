@@ -64,16 +64,61 @@ const Register = () => {
         let label3 = document.getElementById('email-label');
         let label4 = document.getElementById('password-label');
         let label5 = document.getElementById('referral-label');
-        if (name === "") label1.classList.remove('name-label-focus');
-        else label1.classList.add('name-label-focus');
-        if (username === "") label2.classList.remove('username-label-focus');
-        else label2.classList.add('username-label-focus');
-        if (email === "") label3.classList.remove('email-label-focus');
-        else label3.classList.add('email-label-focus');
-        if (password === "") label4.classList.remove('password-label-focus');
-        else label4.classList.add('password-label-focus');
-        if (referral === "") label5.classList.remove('referral-label-focus');
-        else label5.classList.add('referral-label-focus');
+        let input1=document.getElementById('sig-name');
+        let input2=document.getElementById('sig-user');
+        let input3=document.getElementById('sig-email');
+        let input4=document.getElementById('sig-pass');
+        let input5=document.getElementById('sig-ref');
+        if (name === "") {
+            label1.classList.remove('name-label-focus');
+            input1.classList.remove('outfocus');
+            input1.classList.add('infocus')
+        }
+        else {
+            label1.classList.add('name-label-focus');
+            input1.classList.add('outfocus');
+            input1.classList.remove('infocus')
+        }
+        if (username === "") {
+            label2.classList.remove('username-label-focus');
+            input2.classList.remove('outfocus');
+            input2.classList.add('infocus')
+        }
+        else {
+            label2.classList.add('username-label-focus');
+            input2.classList.add('outfocus');
+            input2.classList.remove('infocus')
+        }
+        if (email === "") {
+            label3.classList.remove('email-label-focus');
+            input3.classList.remove('outfocus');
+            input3.classList.add('infocus')
+        }
+        else {
+            label3.classList.add('email-label-focus');
+            input3.classList.add('outfocus');
+            input3.classList.remove('infocus')
+        }
+        if (password === "") {
+            label4.classList.remove('password-label-focus');
+            input4.classList.remove('outfocus');
+            input4.classList.add('infocus')
+        }
+        else {
+            label4.classList.add('password-label-focus');
+            input4.classList.add('outfocus');
+            input4.classList.remove('infocus')
+        }
+        if (referral === "") {
+            label5.classList.remove('referral-label-focus');
+            input5.classList.remove('outfocus');
+            input5.classList.add('infocus')
+        }
+        else {
+            label5.classList.add('referral-label-focus');
+            input5.classList.add('outfocus');
+            input5.classList.remove('infocus')
+        }
     }, [name, username, email, password, referral,gender])
     const valid = () => {
         if (name === '' || username === '' || email === '' || password === '' || gender==='' || academics==='' || checkbox===false) {
@@ -144,14 +189,14 @@ const Register = () => {
                 <form onSubmit={handleSubmit} className='login signup-form' id='signup-form'>
                     <div className="names">
                         <div >
-                            <div className='input-content'>
+                            <div className='input-content infocus' id='sig-name'>
                                 <input type="text" name="name" id="name" className='email-input' value={name} autoComplete="off" onChange={e => handlename(e)} />
                                 <label htmlFor="name" className='name-label' id='name-label'>Name </label>
                             </div>
                             <p style={{ color: "red", fontWeight: "bolder", marginTop: "0px" }} id='name-p'>{nameError}</p>
                         </div>
                         <div>
-                            <div className='input-content'>
+                            <div className='input-content infocus' id='sig-user'>
                                 <input type="text" name="username" id="username" className='email-input' value={username} autoComplete="off" onChange={e => handleusername(e)} />
                                 <label htmlFor="username" className='username-label' id='username-label'>Username</label>
                                 <span></span>
@@ -161,14 +206,14 @@ const Register = () => {
                     </div>
                     <div className="names">
                         <div>
-                            <div className='input-content'>
+                            <div className='input-content infocus' id='sig-email'>
                                 <input type="email" name="email-signup" id="email-2" className='email-input' value={email} autoComplete="off" onChange={e => handleemail(e)} />
                                 <label htmlFor="email-2" className='email-label-2' id='email-label'>Email</label>
                             </div>
                             <p style={{ color: "red", fontWeight: "bolder", marginTop: "0px" }} id='email-p'>{emailError}</p>
                         </div>
                         <div>
-                            <div className='input-content'>
+                            <div className='input-content infocus' id='sig-pass'>
                                 <input type="password" name="password-signup" id="password-2" className='password-input' value={password} onChange={e => handlepassword(e)} />
                                 <label htmlFor="password-2" className='password-label-2' id='password-label'>Password</label>
                             </div>
@@ -176,7 +221,7 @@ const Register = () => {
                         </div>
                     </div>
                     <div>
-                        <div className='input-content'>
+                        <div className='input-content infocus' id='sig-ref'>
                             <input type="text" name="referral" id="referral" className='email-input' value={referral} autoComplete="off" onChange={e => handlereferral(e)} />
                             <label htmlFor="referral" className='referral-label' id='referral-label'>Referral (Optional)</label>
                         </div>

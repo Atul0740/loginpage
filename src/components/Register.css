@@ -67,7 +67,7 @@
     transition: all 0.5s ease;
     text-transform: uppercase;
     font-weight: bolder;
-    background: linear-gradient(#eee, rgb(215, 229, 233));
+    background: transparent;
 }
 
 .username-label {
@@ -85,7 +85,7 @@
     transition: all 0.5s ease;
     text-transform: uppercase;
     font-weight: bolder;
-    background: linear-gradient(#eee, rgb(215, 229, 233));
+    background: transparent;
     color: black;
 }
 
@@ -95,16 +95,16 @@
     text-transform: none;
     letter-spacing: normal;
     left: 20px;
-    top: 125px;
+    top: 120px;
 }
 
 .email-label-focus {
     font-size: smaller;
-    top: 95px;
+    top: 92px;
     transition: all 0.5s ease;
     text-transform: uppercase;
     font-weight: bolder;
-    background: linear-gradient(#eee, rgb(215, 229, 233));
+    background: transparent;
     color: black;
 }
 
@@ -113,17 +113,17 @@
     font-size: larger;
     text-transform: none;
     letter-spacing: normal;
-    top: 125px;
+    top: 120px;
     left: 380px;
 }
 
 .password-label-focus {
     font-size: smaller;
-    top: 95px;
+    top: 92px;
     transition: all 0.5s ease;
     text-transform: uppercase;
     font-weight: bolder;
-    background: linear-gradient(#eee, rgb(215, 229, 233));
+    background: transparent;
     color: black;
 }
 
@@ -138,11 +138,11 @@
 
 .referral-label-focus {
     font-size: smaller;
-    bottom: 58px;
+    bottom: 56px;
     transition: all 0.5s ease;
     text-transform: uppercase;
     font-weight: bolder;
-    background: linear-gradient(#eee, rgb(215, 229, 233));
+    background: transparent;
     color: black;
 }
 
@@ -160,12 +160,13 @@
 
 .radio-toolbar {
     margin: 10px 0px;
-    background-color: rgb(215, 229, 233);
+    background-color: #eee;
     padding: 20px 10px;
     min-width: 320px;
     border-radius: 10px;
     position: relative;
-    border: 1px solid black;
+    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
+    text-align: center;
 }
 
 .gender-title {
@@ -175,7 +176,7 @@
     letter-spacing: 1px;
     top: -12px;
     text-transform: uppercase;
-    background: linear-gradient(#eee, rgb(215, 229, 233));
+    background: transparent;
 }
 
 .academics-title {
@@ -185,17 +186,17 @@
     letter-spacing: 1px;
     top: -10px;
     text-transform: uppercase;
-    background: linear-gradient(#eee, rgb(215, 229, 233));
+    background: transparent
 }
 
 .birthday {
     position: relative;
-    border: 1px solid black;
     border-radius: 10px;
     margin-top: 0px;
     min-width: 320px;
     padding: 20px 15px;
-    background-color: rgb(215, 229, 233);
+    background-color: #eee;
+    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
 }
 
 .birthday-input {
@@ -207,7 +208,7 @@
 }
 
 .Datepicker {
-    background-color: rgb(215, 229, 233);
+    background-color: #eee;
     border: none;
     font-size: large;
 }
@@ -228,7 +229,7 @@
     position: absolute;
     top: -10px;
     left: 10px;
-    background: linear-gradient(#eee, rgb(215, 229, 233));
+    background: transparent;
     color: black;
 }
 
@@ -240,28 +241,25 @@
 
 .radio-toolbar label {
     display: inline-block;
-    background-color: #ddd;
+    background-color: #eee;
     padding: 5px 25px;
     font-family: sans-serif, Arial;
     font-size: 16px;
-    border: 2px solid #ffca12;
     border-radius: 4px;
     margin-right: 20px;
+    margin-left: 10px;
     min-width: 120px;
     text-align: center;
     cursor: pointer;
+    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
 }
 
 .radio-toolbar label:hover {
-    background-color: rgb(252, 255, 221);
-}
-
-.radio-toolbar input[type="radio"]:focus+label {
-    border: 2px solid #ffca12;
+    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
-    background-color: rgb(255, 239, 185);
+    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
     color: black;
 }
 
