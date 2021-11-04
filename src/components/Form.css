@@ -81,22 +81,30 @@ form label {
     color: black;
 }
 
+#email-errp {
+    visibility: hidden;
+}
+
 .password-label {
     background: transparent;
     font-size: larger;
     left: 60px;
-    top: 123px;
+    top: 145px;
 }
 
 .password-label-focussed {
     font-size: smaller;
-    top: 95px;
+    top: 118px;
     left: 10px;
     transition: all 0.5s ease;
     text-transform: uppercase;
     font-weight: bolder;
     background: transparent;
     color: black;
+}
+
+#pass-errp {
+    visibility: hidden;
 }
 
 .input-content {
@@ -206,4 +214,48 @@ form button {
     border-radius: 0px 10px 10px 0px;
     background-image: url('../assets/bubble.jfif');
     background-size: cover;
+}
+
+@media(max-width:1022px) {
+    .form {
+        width: 98vw;
+    }
+}
+
+@media(max-width:767px) {
+    .bg {
+        display: none;
+    }
+    .form {
+        width: 100vw;
+    }
+    .text {
+        width: 100%;
+        border-radius: 10px;
+    }
+    button {
+        max-width: 30vw;
+    }
+}
+
+@media(max-width:479px) {
+    .text {
+        padding-left: 10px;
+    }
+    .form .input-content {
+        width: 80vw;
+    }
+    .login input {
+        width: 40vw;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        margin-left: 0px;
+    }
+    .page-text {
+        font-size: large;
+    }
 }

@@ -162,7 +162,7 @@
     margin: 10px 0px;
     background-color: #eee;
     padding: 20px 10px;
-    min-width: 320px;
+    width: 320px;
     border-radius: 10px;
     position: relative;
     box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
@@ -193,7 +193,7 @@
     position: relative;
     border-radius: 10px;
     margin-top: 0px;
-    min-width: 320px;
+    width: 320px;
     padding: 20px 15px;
     background-color: #eee;
     box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
@@ -289,4 +289,65 @@
 .signup-page-btns button {
     margin: 20px 20px 100px 0px;
     min-width: 100px;
+}
+
+@media(max-width:1022px) {
+    .register {
+        width: 98vw;
+    }
+    .register .bg {
+        display: none;
+    }
+    .register .text {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+@media(max-width:767px) {
+    .register {
+        width: 100vw;
+        height: auto;
+    }
+    .names {
+        flex-direction: column;
+        width: 90vw;
+    }
+    .username-label {
+        top: 120px;
+        left: 20px;
+    }
+    .email-label-2 {
+        top: 220px;
+    }
+    .password-label-2 {
+        top: 320px;
+        left: 20px;
+    }
+    .radio-buttons {
+        flex-direction: column;
+        width: 90vw;
+    }
+    .username-label-focus {
+        top: 92px;
+    }
+    .email-label-focus {
+        top: 195px;
+    }
+    .password-label-focus {
+        top: 295px;
+    }
+    .radio-toolbar {
+        max-width: 90vw;
+    }
+    .radio-toolbar label {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .signup-form input {
+        width: 60vw;
+    }
+    .birthday {
+        width: 90vw;
+    }
 }
