@@ -1,5 +1,5 @@
 .register {
-    color: black;
+    color: white;
     background: #6ca4e9;
     border-radius: 10px;
     display: flex;
@@ -41,7 +41,7 @@
 }
 
 .account-details {
-    color: rgb(70, 69, 69);
+    color: rgb(211, 207, 207);
     margin-bottom: 20px;
 }
 
@@ -62,7 +62,7 @@
 
 .name-label-focus {
     font-size: small;
-    color: black;
+    color: white;
     top: -10px;
     transition: all 0.5s ease;
     text-transform: uppercase;
@@ -86,7 +86,7 @@
     text-transform: uppercase;
     font-weight: bolder;
     background: transparent;
-    color: black;
+    color: white;
 }
 
 .email-label-2 {
@@ -105,7 +105,7 @@
     text-transform: uppercase;
     font-weight: bolder;
     background: transparent;
-    color: black;
+    color: white;
 }
 
 .password-label-2 {
@@ -124,7 +124,7 @@
     text-transform: uppercase;
     font-weight: bolder;
     background: transparent;
-    color: black;
+    color: white;
 }
 
 .referral-label {
@@ -143,12 +143,12 @@
     text-transform: uppercase;
     font-weight: bolder;
     background: transparent;
-    color: black;
+    color: white;
 }
 
 .personal-details {
     margin: 20px 0px;
-    color: grey;
+    color: rgb(231, 227, 227);
 }
 
 .radio-buttons {
@@ -211,6 +211,7 @@
     background-color: #6ca4e9;
     border: none;
     font-size: large;
+    color: white;
 }
 
 .Datepicker:focus {
@@ -230,7 +231,7 @@
     top: -10px;
     left: 10px;
     background: transparent;
-    color: black;
+    color: white;
 }
 
 .radio-toolbar input[type="radio"] {
@@ -260,7 +261,8 @@
 
 .radio-toolbar input[type="radio"]:checked+label {
     box-shadow: inset 6px 6px 12px #5079ac, inset -6px -6px 12px #88cfff;
-    color: black;
+    color: white;
+    font-weight: bolder;
 }
 
 .terms {
@@ -279,7 +281,8 @@
 }
 
 .terms input:checked+label {
-    color: black;
+    color: white;
+    font-weight: bolder;
 }
 
 .terms label {
