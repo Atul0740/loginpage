@@ -1,6 +1,6 @@
 .register {
     color: black;
-    background: white;
+    background: #6ca4e9;
     border-radius: 10px;
     display: flex;
     width: 1000px;
@@ -41,7 +41,7 @@
 }
 
 .account-details {
-    color: grey;
+    color: rgb(70, 69, 69);
     margin-bottom: 20px;
 }
 
@@ -160,12 +160,12 @@
 
 .radio-toolbar {
     margin: 10px 0px;
-    background-color: #eee;
+    background-color: #6ca4e9;
     padding: 20px 10px;
     width: 320px;
     border-radius: 10px;
     position: relative;
-    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
+    box-shadow: 6px 6px 12px #5079ac, -6px -6px 12px #88cfff;
     text-align: center;
 }
 
@@ -195,12 +195,12 @@
     margin-top: 0px;
     width: 320px;
     padding: 20px 15px;
-    background-color: #eee;
-    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
+    background-color: #6ca4e9;
+    box-shadow: 6px 6px 12px #5079ac, -6px -6px 12px #88cfff;
 }
 
 .birthday-input {
-    background-color: #eee;
+    background-color: #6ca4e9;
     padding: 20px 15px;
     min-width: 320px;
     border-radius: 10px;
@@ -208,7 +208,7 @@
 }
 
 .Datepicker {
-    background-color: #eee;
+    background-color: #6ca4e9;
     border: none;
     font-size: large;
 }
@@ -241,7 +241,7 @@
 
 .radio-toolbar label {
     display: inline-block;
-    background-color: #eee;
+    background-color: #6ca4e9;
     padding: 5px 10px;
     font-family: sans-serif, Arial;
     font-size: 14px;
@@ -251,15 +251,15 @@
     min-width: 120px;
     text-align: center;
     cursor: pointer;
-    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
+    box-shadow: 6px 6px 12px #5079ac, -6px -6px 12px #88cfff;
 }
 
 .radio-toolbar label:hover {
-    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
+    box-shadow: inset 6px 6px 12px #5079ac, inset -6px -6px 12px #88cfff;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
-    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
+    box-shadow: inset 6px 6px 12px #5079ac, inset -6px -6px 12px #88cfff;
     color: black;
 }
 

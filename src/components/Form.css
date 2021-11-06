@@ -3,14 +3,14 @@
     width: 960px;
     height: 680px;
     border-radius: 10px;
-    background: #fff;
+    background: #6ca4e9;
     display: flex;
 }
 
 .text {
     width: 65%;
     height: 100%;
-    background: #eee;
+    background: #6ca4e9;
     border-radius: 10px 0px 0px 10px;
     display: flex;
     flex-direction: column;
@@ -49,7 +49,7 @@ form input {
     border-color: transparent;
     -webkit-appearance: none;
     border: 0;
-    background-color: #eee;
+    background-color: #6ca4e9;
     border-radius: 10px;
     width: 300px;
 }
@@ -112,23 +112,23 @@ form label {
     padding: 20px 10px;
     margin: 20px 0px 0px;
     border-radius: 5px;
-    background: #eeeeee;
+    background: #6ca4e9;
 }
 
 .email-input,
 .password-input {
-    background-color: #eeeeee;
+    background-color: #6ca4e9;
     border: 10px;
 }
 
 .infocus {
-    background: #eeeeee;
-    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
+    background: #6ca4e9;
+    box-shadow: 6px 6px 12px #5079ac, -6px -6px 12px #88cfff;
 }
 
 .outfocus {
-    background: #eeeeee;
-    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
+    background: #6ca4e9;
+    box-shadow: inset 6px 6px 12px #5079ac, inset -6px -6px 12px #88cfff;
 }
 
 .input-content i {
@@ -136,7 +136,7 @@ form label {
 }
 
 .forgot {
-    color: grey;
+    color: rgb(59, 59, 59);
     font-size: small;
     margin-bottom: 20px;
     margin-top: 10px;
@@ -159,8 +159,8 @@ form button {
 .login-btn,
 .signup {
     border-radius: 5px;
-    background: #eeeeee;
-    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
+    background: #6ca4e9;
+    box-shadow: 6px 6px 12px #5079ac, -6px -6px 12px #88cfff;
     color: black;
     border-style: none;
     text-transform: uppercase;
@@ -170,8 +170,8 @@ form button {
 .login-btn:hover,
 .signup:hover {
     border-radius: 5px;
-    background: #eeeeee;
-    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
+    background: #6ca4e9;
+    box-shadow: inset 6px 6px 12px #5079ac, inset -6px -6px 12px #88cfff;
 }
 
 .footer {
@@ -185,7 +185,7 @@ form button {
 
 .first-content {
     /* margin-right: 150px; */
-    color: grey;
+    color: rgb(54, 53, 53);
 }
 
 .logo-text {
@@ -199,12 +199,12 @@ form button {
 .icons i {
     margin-right: 10px;
     font-size: 25px;
-    color: rgba(116, 167, 245, 0.623)
+    color: rgb(92, 92, 92)
 }
 
 .icons i:hover {
     font-weight: bolder;
-    color: grey;
+    color: rgb(119, 252, 230);
 }
 
 .bg {
