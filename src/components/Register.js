@@ -267,7 +267,6 @@ const Register = () => {
                 </div>
 
                 <div className="birthday">
-                    {/* <input type="date" name="birthday" id="birthday" className="birthday-input" /> */}
                     <DatePicker selected={date} onChange={date => setDate(date)} className="Datepicker"/>
                     <label htmlFor="birthday">
                         <div className="birthday-title">Date-of-birth</div>

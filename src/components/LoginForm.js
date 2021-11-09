@@ -76,7 +76,7 @@ const Form = () => {
         }
     }
     return (
-        <div className='form' >
+        <div className='form' data-aos='zoom-in' >
             <div className="text">
                 <div className="logo">
                     <a href="https://www.thesocialcomment.com/" target="_blank" rel="noreferrer"> thesocialcomment</a>
@@ -131,7 +131,7 @@ const Form = () => {
             </div>
 
             <div className="bg">
-
+                
             </div>
         </div>
     )
