@@ -92,7 +92,6 @@ button.ghost {
 
 input {
     background: transparent;
-    /* box-shadow: 6px 6px 12px #5079ac, -6px -6px 12px #88cfff; */
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
@@ -428,7 +427,6 @@ input:focus {
 }
 
 .first-content {
-    /* margin-right: 150px; */
     color: rgb(71, 66, 66);
 }
 
