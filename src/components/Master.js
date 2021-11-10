@@ -25,7 +25,7 @@ const Master = () => {
         setpassword(e.target.value);
         setpasswordError('.');
         document.getElementById('pass-errp').style.visibility = 'hidden';
-        document.getElementById('eye').style.display='block'
+        document.getElementById('eye').style.display = 'block'
     };
     useEffect(() => {
         let label = document.getElementById('email-labelled');
@@ -51,13 +51,13 @@ const Master = () => {
             label.classList.remove('label-focussed');
             input.classList.remove('outfocus');
             input.classList.add('infocus')
-            document.getElementById('eye').style.display='none'
+            document.getElementById('eye').style.display = 'none'
         }
         else {
             label.classList.add('label-focussed');
             input.classList.add('outfocus');
             input.classList.remove('infocus')
-            document.getElementById('eye').style.display='block'
+            document.getElementById('eye').style.display = 'block'
         }
     }, [password])
     const valid = () => {
@@ -85,7 +85,7 @@ const Master = () => {
         if (valid()) {
             setemail('');
             setpassword('')
-            document.getElementById('eye').style.display='none'
+            document.getElementById('eye').style.display = 'none'
         }
     }
     const [name, setname] = useState("")
@@ -123,7 +123,7 @@ const Master = () => {
         setpasswords(e.target.value);
         setpasswordErrors('.')
         document.getElementById('pass-p').style.visibility = 'hidden'
-        document.getElementById('eyes').style.display='block'
+        document.getElementById('eyes').style.display = 'block'
     };
     const handlereferral = (e) => {
         setreferral(e.target.value);
@@ -188,13 +188,13 @@ const Master = () => {
             label4.classList.remove('labels-focussed');
             input4.classList.remove('outfocus');
             input4.classList.add('infocus');
-            document.getElementById('eyes').style.display='none'
+            document.getElementById('eyes').style.display = 'none'
         }
         else {
             label4.classList.add('labels-focussed');
             input4.classList.add('outfocus');
             input4.classList.remove('infocus')
-            document.getElementById('eyes').style.display='block'
+            document.getElementById('eyes').style.display = 'block'
         }
         if (referral === "") {
             label5.classList.remove('labels-focussed');
@@ -212,13 +212,13 @@ const Master = () => {
         seteye(!eye)
     }
     useEffect(() => {
-        if(eye){
-            document.getElementById('password').type='text'
-            document.getElementById('passwords').type='text'
+        if (eye) {
+            document.getElementById('password').type = 'text'
+            document.getElementById('passwords').type = 'text'
         }
-        else{
-            document.getElementById('password').type='password'
-            document.getElementById('passwords').type='password'
+        else {
+            document.getElementById('password').type = 'password'
+            document.getElementById('passwords').type = 'password'
         }
     }, [eye])
     const valid2 = () => {
@@ -275,30 +275,32 @@ const Master = () => {
             document.querySelector('input[type=radio][name=gender]:checked').checked = false;
             document.querySelector('input[type=radio][name=academics]:checked').checked = false;
             document.querySelector('input[type=checkbox]:checked').checked = false;
-            document.getElementById('eyes').style.display='none'
+            document.getElementById('eyes').style.display = 'none'
         }
     };
     return (
         <div className="container" id="container">
             <div className="form-container sign-in-container">
                 <div className='form'>
-                    <div className='logo'> <a href="https://www.thesocialcomment.com/">thesocialcomment</a> </div>
+                    <div className='logo'> <a href="https://www.thesocialcomment.com/" target="_blank" rel="noreferrer">thesocialcomment</a> </div>
                     <h1>Login</h1>
                     <div className="input-content" id='input-email'>
                         <i class="fa fa-envelope"></i>
                         <input type="email" id='email' value={email} style={{ marginBottom: "0px", marginTop: "0px" }} autoComplete="off" onChange={handleemails} />
                         <label className="login-label" id='email-labelled' htmlFor='email'>Email</label>
                     </div>
-                    <p style={{ marginBottom: "5px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start" }} id='email-errp'>{emailError}</p>
+                    <p style={{ marginBottom: "5px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start",visibility:"hidden" }} id='email-errp'>{emailError}</p>
                     <div className="input-content" id='input-password'>
                         <i class="fa fa-lock"></i>
                         <input type="password" id='password' value={password} style={{ marginBottom: "0px", marginTop: "0px" }} autoComplete="new-password" onChange={handlepasswords} />
                         <label className="login-label" id='password-labelled' htmlFor='password'>Password</label>
-                        <i class="far fa-eye" id="eye" onClick={handleeye} style={{display:"none"}}></i>
+                        <i class="far fa-eye" id="eye" onClick={handleeye} style={{ display: "none" }}></i>
                     </div>
-                    <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start" }} id='pass-errp'>{passwordError}</p>
+                    <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start",visibility:"hidden" }} id='pass-errp'>{passwordError}</p>
                     <a href="/" style={{ marginBottom: "0px", marginTop: "0px", alignSelf: "flex-start", color: "blue" }}>Forgot your password?</a>
                     <button style={{ marginTop: "10px" }} type='submit' onClick={HandleSubmit}>Login</button>
+                    <p style={{ fontWeight: "bolder" }}>Start building up your community and get ahead of the crowd</p>
+                    <button className="ghost" id="signUp" onClick={signUpButton}>Register</button>
                     <div className="footer">
                         <div className="first-content">
                             <span className="logo-text">thesocialcomment</span>
@@ -321,24 +323,25 @@ const Master = () => {
                     </div>
                 </div>
             </div>
+
             <div className="form-container sign-up-container" id='sign-up-container'>
                 <div className='form'>
-                    <div className='logo'> <a href="https://www.thesocialcomment.com/">thesocialcomment</a> </div>
+                    <div className='logo'> <a href="https://www.thesocialcomment.com/" target="_blank" rel="noreferrer">thesocialcomment</a> </div>
                     <h1>Create Account</h1>
                     <div className="names">
-                        <div>
+                        <div className='input-container'>
                             <div className="input-content" id='sig-name'>
                                 <input type="text" id='name' style={{ marginBottom: "0px", marginTop: "0px" }} autoComplete="off" onChange={handlename} value={name} />
                                 <label className="signup-label" htmlFor='name' id='name-label'>Name</label>
                             </div>
-                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start" }} id='name-p'>{nameError}</p>
+                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start" ,visibility:"hidden" }} id='name-p'>{nameError}</p>
                         </div>
                         <div>
                             <div className="input-content" id='sig-user'>
                                 <input type="text" style={{ marginBottom: "0px", marginTop: "0px" }} id='username' autoComplete="off" onChange={handleusername} value={username} />
                                 <label className="signup-label" htmlFor='username' id='username-label'>Username</label>
                             </div>
-                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start" }} id='user-p'>{usernameError}</p>
+                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start",visibility:"hidden" }} id='user-p'>{usernameError}</p>
                         </div>
                     </div>
                     <div className="names">
@@ -347,15 +350,15 @@ const Master = () => {
                                 <input type="email" id='emails' style={{ marginBottom: "0px", marginTop: "0px" }} autoComplete="off" onChange={handleemail} value={emails} />
                                 <label className="signup-label" htmlFor='emails' id='email-label'>Email</label>
                             </div>
-                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start" }} id='email-p'>{emailErrors}</p>
+                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start",visibility:"hidden" }} id='email-p'>{emailErrors}</p>
                         </div>
                         <div>
                             <div className="input-content" id='sig-pass'>
                                 <input type="password" id='passwords' style={{ marginBottom: "0px", marginTop: "0px" }} autoComplete="new-password" onChange={handlepassword} value={passwords} />
                                 <label className="signup-label" htmlFor='passwords' id='password-label'>Password</label>
-                                <i class="far fa-eye" id="eyes" onClick={handleeye} style={{marginRight:"10px",display:"none"}}></i>
+                                <i class="far fa-eye" id="eyes" onClick={handleeye} style={{ marginRight: "10px", display: "none" }}></i>
                             </div>
-                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start" }} id='pass-p'>{passwordErrors}</p>
+                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start",visibility:"hidden" }} id='pass-p'>{passwordErrors}</p>
                         </div>
                     </div>
                     <div className="input-content" id='sig-ref'>
@@ -368,12 +371,12 @@ const Master = () => {
                                 <span>GENDER</span>
                                 <div class="radio-toolbar">
                                     <input type="radio" id="male" name="gender" value="male" onChange={handleGender} />
-                                    <label for="male" className='infocus'>Male</label>
+                                    <label htmlFor="male" className='infocus'>Male</label>
                                     <input type="radio" id="female" name="gender" value="female" onChange={handleGender} />
-                                    <label for="female" className='infocus'>Female</label>
+                                    <label htmlFor="female" className='infocus'>Female</label>
                                 </div>
                             </div>
-                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start" }} id='gender'>{genderError}</p>
+                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start",visibility:"hidden" }} id='gender'>{genderError}</p>
                         </div>
 
                         <div style={{ marginBottom: "0px", marginTop: "0px" }}>
@@ -381,12 +384,12 @@ const Master = () => {
                                 <span>ACADEMICS</span>
                                 <div class="radio-toolbar">
                                     <input type="radio" id="graduate" name="academics" value="graduate" onChange={handleAcademic} />
-                                    <label for="graduate" className='infocus'>Graduate</label>
+                                    <label htmlFor="graduate" className='infocus'>Graduate</label>
                                     <input type="radio" id="undergraduate" name="academics" value="undergraduate" onChange={handleAcademic} />
-                                    <label for="undergraduate" className='infocus'>Undergraduate</label>
+                                    <label htmlFor="undergraduate" className='infocus'>Undergraduate</label>
                                 </div>
                             </div>
-                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start" }} id='academics'>{academicsError}</p>
+                            <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start",visibility:"hidden" }} id='academics'>{academicsError}</p>
                         </div>
 
                     </div>
@@ -400,8 +403,10 @@ const Master = () => {
                             <span className="terms-text">By sign up you agree to the terms and condition and privacy policy</span>
                         </label>
                     </div>
-                    <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start" }} id='checkbox-p'>{checkedError}</p>
+                    <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start",visibility:"hidden" }} id='checkbox-p'>{checkedError}</p>
                     <button style={{ marginTop: "10px", marginBottom: "50px" }} type='submit' onClick={handleSubmit} >Register</button>
+                    <p style={{ fontWeight: "bolder" }}>Create-Share-Explore-Grow with us</p>
+                    <button className="ghost" id="signIn" onClick={signInButton}>Login</button>
                     <div className="footer">
                         <div className="first-content">
                             <span className="logo-text">thesocialcomment</span>
@@ -430,14 +435,14 @@ const Master = () => {
                     <div className="overlay-panel overlay-left">
                         <div className="text-con">
                             <h1>Welcome Back!</h1>
-                            <p style={{fontWeight:"bolder"}}>Create-Share-Explore-Grow with us</p>
+                            <p style={{ fontWeight: "bolder" }}>Create-Share-Explore-Grow with us</p>
                             <button className="ghost" id="signIn" onClick={signInButton}>Login</button>
                         </div>
                     </div>
                     <div className="overlay-panel overlay-right">
                         <div className="text-con">
                             <h1>Hello, Friend!</h1>
-                            <p style={{fontWeight:"bolder"}}>Start building up your community and get ahead of the crowd</p>
+                            <p style={{ fontWeight: "bolder" }}>Start building up your community and get ahead of the crowd</p>
                             <button className="ghost" id="signUp" onClick={signUpButton}>Register</button>
                         </div>
                     </div>
