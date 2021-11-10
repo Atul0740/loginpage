@@ -1,7 +1,13 @@
+.logo a {
+    font-weight: bolder;
+    color: #1c0060;
+    font-size: xx-large;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
 .logo {
     align-self: flex-start;
-    font-weight: bolder;
-    color: blue;
+    margin-bottom: 10px;
 }
 
 .sign-in-container h1,
@@ -26,10 +32,6 @@ p {
     margin: 20px 0 30px;
 }
 
-span {
-    font-size: 12px;
-}
-
 a {
     color: #333;
     font-size: 14px;
@@ -37,17 +39,25 @@ a {
     margin: 15px 0;
 }
 
+.form h1 {
+    margin-bottom: 10px;
+}
+
 button {
     border-radius: 10px;
     border: 1px solid #ffca12;
     background-color: #ffca12;
-    color: #fff;
+    color: #000;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
+    cursor: pointer;
+    box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 button:active {
@@ -59,12 +69,12 @@ button:focus {
 }
 
 button.ghost {
-    background-color: transparent;
-    border-color: #FFFFFF;
+    background-color: #ffca12;
+    border-color: #ffca12;
 }
 
-form {
-    background-color: #6ca4e9;
+.form {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     padding: 0px 50px;
@@ -72,31 +82,36 @@ form {
     text-align: center;
 }
 
-.sign-in-container form {
+.sign-in-container .form {
     justify-content: center;
 }
 
-.sign-up-container form {
-    padding-top: 50px;
+.sign-up-container .form {
+    justify-content: center;
 }
 
 input {
-    background: #6ca4e9;
-    box-shadow: 6px 6px 12px #5079ac, -6px -6px 12px #88cfff;
+    background: transparent;
+    /* box-shadow: 6px 6px 12px #5079ac, -6px -6px 12px #88cfff; */
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
 }
 
+input:focus {
+    outline: none;
+}
+
 .container {
-    background-color: #6ca4e9;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
-    overflow: hidden;
-    width: 1000px;
-    height: 680px;
+    min-width: 100vw;
+    min-height: 100vh;
+    height: fit-content;
+    border: none;
 }
 
 .form-container {
@@ -104,6 +119,7 @@ input {
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
+    border: none;
 }
 
 .sign-in-container {
@@ -159,11 +175,11 @@ input {
 }
 
 .overlay {
-    background: #6ca4e9;
+    background: #fff;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
-    color: #fff;
+    color: #000;
     position: relative;
     left: -100%;
     height: 100%;
@@ -184,11 +200,11 @@ input {
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    top: 0;
     height: 100%;
     width: 50%;
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
+    border: none;
 }
 
 .overlay-left {
@@ -208,10 +224,89 @@ input {
     background-image: url(../assets/login.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-position: bottom;
 }
 
 .container.right-panel-active .overlay-right {
     transform: translateX(20%);
+}
+
+.names {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: space-between
+}
+
+.names .input-content {
+    width: 20vw;
+}
+
+.text-con {
+    position: absolute;
+    top: 10vh;
+}
+
+.infocus {
+    background: #6ca4e9;
+    box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.outfocus {
+    background: #6ca4e9;
+    box-shadow: inset 6px 6px 12px #5079ac, inset -6px -6px 12px #88cfff;
+}
+
+.input-content {
+    display: flex;
+    background: #6ca4e9;
+    align-items: center;
+    padding: 0px 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.input-content label {
+    position: absolute;
+    cursor: text;
+}
+
+.login-label {
+    top: 12px;
+    left: 50px;
+}
+
+.label-focussed {
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: black;
+    font-size: 12px;
+    top: -10px;
+    left: 10px;
+    background: linear-gradient(#fff, #6ca4e9);
+    transition: all 0.3s ease;
+}
+
+.sign-up-container .input-content {
+    padding: 0px 5px;
+}
+
+.signup-label {
+    left: 20px;
+    top: 12px;
+}
+
+.sign-up-container .labels-focussed {
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: black;
+    font-size: 12px;
+    top: -8px;
+    left: 10px;
+    background: linear-gradient(#fff, #6ca4e9);
+    transition: all 0.3s ease;
 }
 
 .radio-btn {
@@ -220,13 +315,26 @@ input {
 }
 
 .gender {
-    border: 1px solid black;
-    margin: 10px 0px;
+    border: 1px solid #6ca4e9;
+    background: #6ca4e9;
+    margin: 20px 0px 0px;
     width: fit-content;
+    border-radius: 10px;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.gender span {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: linear-gradient(#fff, #6ca4e9);
+    font-weight: bolder;
+    font-size: 12px;
 }
 
 .radio-toolbar {
-    margin: 0 5px 10px;
+    width: 20vw;
 }
 
 .radio-toolbar input[type="radio"] {
@@ -237,26 +345,54 @@ input {
 
 .radio-toolbar label {
     display: inline-block;
-    background-color: #ddd;
+    background-color: #ffca12;
     padding: 5px 10px;
     font-family: sans-serif, Arial;
-    font-size: 14px;
-    border: 2px solid #444;
+    font-size: 12px;
+    border: 2px solid #ffca12;
     border-radius: 4px;
     margin: 0px 5px;
+    width: 9vw;
+    cursor: pointer;
 }
 
 .radio-toolbar label:hover {
-    background-color: #dfd;
+    background-color: #ffca12;
 }
 
 .radio-toolbar input[type="radio"]:focus+label {
-    border: 2px solid #444;
+    border: 2px solid #ffca12;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
-    background-color: #bfb;
-    border-color: #4c4;
+    background-color: #ffca12;
+    border-color: #ffca12;
+    box-shadow: inset 20px 20px 60px #d9ac0f, inset -20px -20px 60px #ffe815;
+    font-weight: bolder;
+}
+
+.birthday {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+.birthday-title {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+    top: -8px;
+    left: 10px;
+    z-index: 1;
+    background: linear-gradient(transparent, #6ca4e9);
+}
+
+.Datepicker {
+    background: #6ca4e9;
+    border-radius: 10px;
 }
 
 .terms {
@@ -270,10 +406,16 @@ input {
     padding: 0;
     width: 5%;
     margin: 0px 5px 0 0;
+    cursor: pointer;
 }
 
 .terms label {
     margin: 0;
+    cursor: pointer;
+}
+
+.terms-text {
+    font-size: 12px;
 }
 
 .footer {
