@@ -299,8 +299,10 @@ const Master = () => {
                     <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start",visibility:"hidden" }} id='pass-errp'>{passwordError}</p>
                     <a href="/" style={{ marginBottom: "0px", marginTop: "0px", alignSelf: "flex-start", color: "blue" }}>Forgot your password?</a>
                     <button style={{ marginTop: "10px" }} type='submit' onClick={HandleSubmit}>Login</button>
+                    <div className='ss-btn'>
                     <p style={{ fontWeight: "bolder" }}>Start building up your community and get ahead of the crowd</p>
                     <button className="ghost" id="signUp" onClick={signUpButton}>Register</button>
+                    </div>
                     <div className="footer">
                         <div className="first-content">
                             <span className="logo-text">thesocialcomment</span>
@@ -405,8 +407,10 @@ const Master = () => {
                     </div>
                     <p style={{ marginBottom: "0px", marginTop: "0px", color: "red", fontWeight: "bolder", alignSelf: "flex-start",visibility:"hidden" }} id='checkbox-p'>{checkedError}</p>
                     <button style={{ marginTop: "10px", marginBottom: "50px" }} type='submit' onClick={handleSubmit} >Register</button>
+                    <div className="ss-btn">
                     <p style={{ fontWeight: "bolder" }}>Create-Share-Explore-Grow with us</p>
                     <button className="ghost" id="signIn" onClick={signInButton}>Login</button>
+                    </div>
                     <div className="footer">
                         <div className="first-content">
                             <span className="logo-text">thesocialcomment</span>

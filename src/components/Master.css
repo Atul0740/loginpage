@@ -451,6 +451,10 @@ input:focus {
     color: rgb(119, 252, 230);
 }
 
+.ss-btn {
+    display: none;
+}
+
 @media(max-width:1200px) {
     .radio-toolbar label {
         font-size: 10px;
@@ -488,6 +492,9 @@ input:focus {
     }
     .overlay-container {
         display: none;
+    }
+    .ss-btn {
+        display: block;
     }
     .sign-in-container {
         width: 100vw;
